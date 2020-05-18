@@ -21,17 +21,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 
-Route::group([
+// Route::group([
 
-    'middleware' => 'api',
-    // 'namespace' => 'App\Http\Controllers',
-    'prefix' => 'auth'
+//     'middleware' => 'api',
+//     // 'namespace' => 'App\Http\Controllers',
+//     'prefix' => 'auth'
 
-], function ($router) {
+// ], function ($router) {
 
-    Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
+//     Route::get('login', 'AuthController@loginpage');
+//     Route::post('login', 'AuthController@login');
+//     Route::post('logout', 'AuthController@logout');
+//     Route::post('refresh', 'AuthController@refresh');
+//     Route::post('me', 'AuthController@me');
 
-});
+// });
+
+Auth::routes();
